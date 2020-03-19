@@ -1,0 +1,10 @@
+.idea
+.vscode
+venv
+__pycache__/
+
+
+# Docker
+*.pid
+apps/celerybeat-schedule
+apps/procuredesk/env.py
