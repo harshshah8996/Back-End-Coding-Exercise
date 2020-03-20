@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "5a1402e2-9227-42d5-abfe-937711caaced",
+		"name": "Backend Coding Exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all logs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/logs?user_id=ABC123XYZ&action_type=NAVIGATE&end_date=2018-10-21&start_date=2018-10-19&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logs"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "ABC123XYZ"
+						},
+						{
+							"key": "action_type",
+							"value": "NAVIGATE"
+						},
+						{
+							"key": "end_date",
+							"value": "2018-10-21"
+						},
+						{
+							"key": "start_date",
+							"value": "2018-10-19"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post logs of users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"userId\": \"ABC123XYZ\",\n        \"sessionId\": \"XYZ456ABC\",\n        \"actions\": [\n            {\n                \"time\": \"2018-10-18T21:37:28-06:00\",\n                \"type\": \"CLICK\",\n                \"properties\": {\n                    \"locationX\": 52,\n                    \"locationY\": 11\n                }\n            },\n            {\n                \"time\": \"2018-10-18T21:37:30-06:00\",\n                \"type\": \"VIEW\",\n                \"properties\": {\n                    \"viewedId\": \"FDJKLHSLD\"\n                }\n            },\n            {\n                \"time\": \"2018-10-18T21:37:30-06:00\",\n                \"type\": \"NAVIGATE\",\n                \"properties\": {\n                    \"pageFrom\": \"communities\",\n                    \"pageTo\": \"inventory\"\n                }\n            }\n        ]\n    },\n    {\n        \"userId\": \"ABC123XYZ\",\n        \"sessionId\": \"XYZ456ABC\",\n        \"actions\": [\n            {\n                \"time\": \"2018-10-18T21:37:28-06:00\",\n                \"type\": \"CLICK\",\n                \"properties\": {\n                    \"locationX\": 52,\n                    \"locationY\": 11\n                }\n            },\n            {\n                \"time\": \"2018-10-18T21:37:30-06:00\",\n                \"type\": \"VIEW\",\n                \"properties\": {\n                    \"viewedId\": \"FDJKLHSLD\"\n                }\n            },\n            {\n                \"time\": \"2018-10-18T21:37:30-06:00\",\n                \"type\": \"NAVIGATE\",\n                \"properties\": {\n                    \"pageFrom\": \"communities\",\n                    \"pageTo\": \"inventory\"\n                }\n            }\n        ]\n    },\n    {\n        \"userId\": \"ABC123XYZ\",\n        \"sessionId\": \"XYZ456ABC\",\n        \"actions\": [\n            {\n                \"time\": \"2018-10-18T21:37:28-06:00\",\n                \"type\": \"CLICK\",\n                \"properties\": {\n                    \"locationX\": 52,\n                    \"locationY\": 11\n                }\n            },\n            {\n                \"time\": \"2018-10-18T21:37:30-06:00\",\n                \"type\": \"VIEW\",\n                \"properties\": {\n                    \"viewedId\": \"FDJKLHSLD\"\n                }\n            },\n            {\n                \"time\": \"2018-10-18T21:37:30-06:00\",\n                \"type\": \"NAVIGATE\",\n                \"properties\": {\n                    \"pageFrom\": \"communities\",\n                    \"pageTo\": \"inventory\"\n                }\n            }\n        ]\n    },\n    {\n        \"userId\": \"ABC123XYZ\",\n        \"sessionId\": \"XYZ456ABC\",\n        \"actions\": [\n            {\n                \"time\": \"2018-10-18T21:37:28-06:00\",\n                \"type\": \"CLICK\",\n                \"properties\": {\n                    \"locationX\": 52,\n                    \"locationY\": 11\n                }\n            },\n            {\n                \"time\": \"2018-10-18T21:37:30-06:00\",\n                \"type\": \"VIEW\",\n                \"properties\": {\n                    \"viewedId\": \"FDJKLHSLD\"\n                }\n            },\n            {\n                \"time\": \"2018-10-18T21:37:30-06:00\",\n                \"type\": \"NAVIGATE\",\n                \"properties\": {\n                    \"pageFrom\": \"communities\",\n                    \"pageTo\": \"inventory\"\n                }\n            }\n        ]\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/logs/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logs",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
